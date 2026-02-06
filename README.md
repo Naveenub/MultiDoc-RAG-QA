@@ -1,4 +1,4 @@
-**Multi-Document RAG QA System**
+# **Multi-Document RAG QA System**
 
 Multi-Document RAG QA System is a research-grade, open-source platform designed for **question answering across multiple documents** using Retrieval-Augmented Generation (RAG). It is engineered to be universal, scalable, ML-driven, and explainable—not just another document search tool.
 
