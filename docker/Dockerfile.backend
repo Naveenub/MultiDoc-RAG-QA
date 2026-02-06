@@ -1,5 +1,14 @@
 FROM python:3.11-slim
+
 WORKDIR /app
+
+# Copy backend code
 COPY backend/ .
-RUN pip install --no-cache-dir -r requirements.txt
+
+# Upgrade pip and install dependencies
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+RUN pip install pytest   # <-- install pytest explicitly (optional if not in requirements.txt)
+
+# Set default command
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
