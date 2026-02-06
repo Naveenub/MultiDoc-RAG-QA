@@ -2,4 +2,5 @@ FROM node:18
 WORKDIR /app
 COPY frontend/ .
 RUN npm install
+RUN pip install pytest   # <-- install pytest explicitly (optional if not in requirements.txt)
 CMD ["npm", "start"]
