@@ -7,4 +7,4 @@ faiss-cpu
 python-multipart
 python-docx
 pymupdf
-fastapi
+pytest
