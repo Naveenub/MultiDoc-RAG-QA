@@ -96,65 +96,65 @@ RAG ensures **accurate, explainable answers**:
 🧱 **Repository Structure**
 
 ```
-                     multi-doc-rag-qa/
-                     ├── README.md
-                     ├── LICENSE
-                     ├── .env.example
-                     ├── docker-compose.yml
-                     ├── backend/
-                     │   ├── app.py                  # FastAPI main server
-                     │   ├── config.py               # Configs (DB, embeddings, LLM)
-                     │   ├── ingest.py               # Document ingestion pipeline
-                     │   ├── retriever.py            # Vector DB retrieval
-                     │   ├── llm.py                  # LLM query handling
-                     │   ├── evaluator.py            # QA evaluation & metrics
-                     │   ├── requirements.txt
-                     │   └── utils/
-                     │       ├── file_loader.py      # PDF, DOCX, TXT loaders
-                     │       ├── text_splitter.py    # Chunking & tokenization
-                     │       ├── embedding_utils.py  # Embedding creation & DB insertion
-                     │       └── logger.py           # Logging utility
-                     ├── frontend/
-                     │   ├── package.json
-                     │   ├── public/
-                     │   │   └── index.html
-                     │   └── src/
-                     │       ├── index.jsx
-                     │       ├── App.jsx
-                     │       ├── components/
-                     │       │   ├── ChatWindow.jsx
-                     │       │   ├── FileUploader.jsx
-                     │       │   ├── QueryInput.jsx
-                     │       │   └── EvaluationPanel.jsx
-                     │       └── services/
-                     │           ├── api.js          # API calls to backend
-                     │           └── utils.js
-                     ├── ml/
-                     │   ├── feature_engineering/
-                     │   │   └── embedding_pipeline.py
-                     │   ├── models/
-                     │   │   └── local_models.py
-                     │   └── training/
-                     │       └── model_finetune.py
-                     ├── rag/
-                     │   ├── pipelines/
-                     │   │   ├── multi_doc_rag.py
-                     │   │   ├── streaming_rag.py
-                     │   │   └── evaluation_rag.py
-                     │   └── vector_db/
-                     │       ├── faiss_db.py         # FAISS vector DB integration
-                     │       └── pinecone_db.py      # Pinecone alternative
-                     ├── tests/
-                     │   ├── test_ingest.py
-                     │   ├── test_retriever.py
-                     │   ├── test_llm.py
-                     │   └── test_api.py
-                     ├── .github/
-                     │   └── workflows/
-                     │       └── ci-cd.yml           # GitHub Actions CI/CD pipeline
-                     └── docker/
-                         ├── Dockerfile.backend
-                         └── Dockerfile.frontend
+multi-doc-rag-qa/
+├── README.md
+├── LICENSE
+├── .env.example
+├── docker-compose.yml
+├── backend/
+│   ├── app.py                  # FastAPI main server
+│   ├── config.py               # Configs (DB, embeddings, LLM)
+│   ├── ingest.py               # Document ingestion pipeline
+│   ├── retriever.py            # Vector DB retrieval
+│   ├── llm.py                  # LLM query handling
+│   ├── evaluator.py            # QA evaluation & metrics
+│   ├── requirements.txt
+│   └── utils/
+│       ├── file_loader.py      # PDF, DOCX, TXT loaders
+│       ├── text_splitter.py    # Chunking & tokenization
+│       ├── embedding_utils.py  # Embedding creation & DB insertion
+│       └── logger.py           # Logging utility
+├── frontend/
+│   ├── package.json
+│   ├── public/
+│   │   └── index.html
+│   └── src/
+│       ├── index.jsx
+│       ├── App.jsx
+│       ├── components/
+│       │   ├── ChatWindow.jsx
+│       │   ├── FileUploader.jsx
+│       │   ├── QueryInput.jsx
+│       │   └── EvaluationPanel.jsx
+│       └── services/
+│           ├── api.js          # API calls to backend
+│           └── utils.js
+├── ml/
+│   ├── feature_engineering/
+│   │   └── embedding_pipeline.py
+│   ├── models/
+│   │   └── local_models.py
+│   └── training/
+│       └── model_finetune.py
+├── rag/
+│   ├── pipelines/
+│   │   ├── multi_doc_rag.py
+│   │   ├── streaming_rag.py
+│   │   └── evaluation_rag.py
+│   └── vector_db/
+│       ├── faiss_db.py         # FAISS vector DB integration
+│       └── pinecone_db.py      # Pinecone alternative
+├── tests/
+│   ├── test_ingest.py
+│   ├── test_retriever.py
+│   ├── test_llm.py
+│   └── test_api.py
+├── .github/
+│   └── workflows/
+│       └── ci-cd.yml           # GitHub Actions CI/CD pipeline
+└── docker/
+    ├── Dockerfile.backend
+    └── Dockerfile.frontend
 ```
 
 ---
