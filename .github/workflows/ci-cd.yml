@@ -7,13 +7,23 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.11
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
+
+      - name: Upgrade pip
+        run: pip install --upgrade pip
+
       - name: Install backend dependencies
-        run: pip install -r backend/requirements.txt
+        run: |
+          pip install -r backend/requirements.txt
+          pip install pytest   # <-- install pytest explicitly
+
       - name: Run tests
         run: pytest tests/
