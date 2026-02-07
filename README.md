@@ -242,4 +242,5 @@ No magical QA claims. Fully transparent, reproducible, and explainable.
 ---
 
 📘 Detailed Case Study:
+
 🔗 Notion Portfolio: https://trail-bramble-8d5.notion.site/Naveen-Badiger-DevOps-Cloud-Engineer-300b680e255b80618978c2654214a6c6
